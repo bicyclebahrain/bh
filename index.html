@@ -4,204 +4,430 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
 <style>
-body,h1,h2{font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-p {line-height: 2}
-.bgimg, .bgimg2, .bgimg3, .bgimg4,.bgimg5 {
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-.bgimg {background-image: url("src/img/bikeart.jpg")}
-.bgimg2 {background-image: url("src/img/geet3.jpg")}
-.bgimg3 {background-image: url("src/img/bikeold.jpg")}
-.bgimg4 {background-image: url("src/img/fa.jpg")}
-.bgimg5 {background-image: url("src/img/order.jpg")}
+
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif; font-size: 20px;}
+h3 {margin: 0;}
+p {font-size: 15px; line-height: 12px; color:gray; margin-bottom: 5px; margin-top: 0;}
+strong {font-size: 18px;}
+.w3-bar-block .w3-bar-item {padding:20px}
+.price {margin-bottom:20px;}
+p span {background-color: #ff0; color: black;}
+ul {font-size: 18px; line-height: 18px; margin: 0;}
+
+.mySlides2 {display:none;}
 </style>
 <body>
 
-<!-- Header / Home-->
-<header class="w3-display-container bgimg w3-grayscale-min" id="home">
-  <div class="w3-display-topright w3-padding" lang="ar" dir="rtl" style="color:white;"><a href="https://bicyclebahrain.github.io/ar/" style="text-decoration:none;"><b>عربي؟</b></a></div>
-  <div class="w3-display-middle w3-text-white w3-center w3-wide">
-    <h1 class="w3-jumbo">Bicycle<sup style="font-size:25px;vertical-align:middle;">&reg;</sup> Cards</h1>
-    <h2>In Bahrain</h2>
+
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#products" onclick="w3_close()" class="w3-bar-item w3-button">Products</a>
+  <a href="#order" onclick="w3_close()" class="w3-bar-item w3-button">Order</a>
+  <a href="#delivery" onclick="w3_close()" class="w3-bar-item w3-button">Delivery</a>
+  <a href="#faq" onclick="w3_close()" class="w3-bar-item w3-button">FAQ</a>
+  <a dir="rtl" lang="ar" href="https://bicyclebahrain.github.io/ar/" onclick="w3_close()" class="w3-bar-item w3-button">الموقع العربي</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <a class="w3-button w3-padding-16 w3-right" dir="rtl" lang="ar" style="font-size:18px; font-weight:bold; text-decoration:none; padding-left:0;" href="https://bicyclebahrain.github.io/en/">عربي؟</a>
+    <div class="w3-center w3-padding-16">Bicycle&reg; Bahrain</div>
+  </div>
+</div>
+<div style="min-height:100px;"></div>
+
+<div class="w3-content w3-padding w3-center" style="max-width:900px;">
+  <div class="mySlides2 w3-container w3-red" style="height:130px;">
+    <h1 style="padding-top:4px;"><b>Contest on Instagram!</b></h1>
+    <h1><i>Win Free Cards<br>@bicyclebh</i></h1>
+  </div>
+
+  <div class="mySlides2 w3-container w3-blue" style="height:130px;">
+    <h1><i>New Products</i></h1>
+    <h1><i>New Offers & Gifts</i></h1>
+    <h1><i>&darr;</i></h1>
 
   </div>
-  <h2 class="w3-display-bottommiddle"><b style="color:white; font-size:35px;">&darr;</b></h2>
-</header>
 
-<!-- About / Jane And John -->
-<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
-  <div class="w3-content">
-    <h1 class="w3-center w3-text-grey"><b>Available Products</b></h1>
-    <p class="w3-center w3-text-grey">Limited Quantity</p>
-    <div class="w3-row-padding w3-center">
-    <div class="w3-half w3-container">
-      <h2>Bicycle<sup style="font-size:20px;">&reg;</sup> <b style="color: hsla(0, 100%, 64%, 0.97);">Red</b> Standard Decks</h2>
-      <img src="src/img/redback.jpg" class="w3-round w3-image" width="300" style="border: 2px solid grey;">
-      <p style="font-size:20px;"><b>3.5 BD</b></p>
+  <div class="mySlides2 w3-container w3-green" style="height:130px;">
+    <h1><b>Discounted Prices</b></h1>
+    <h1><i>Discounted & Free Delivery</i></h1>
+    <h1><i>&darr;</i></h1>
+
+
+  </div>
+
+
+</div>
+<!-- !PAGE CONTENT! -->
+<div id="products" class="w3-main w3-content w3-padding w3-center" style="max-width:900px;margin-top:20px;">
+<h5 style="margin-top:0; padding-top:0; padding-bottom:5px;"><b>Products</b></h5>
+  <!-- First Photo Grid-->
+
+    <div class="w3-mobile" style="margin-bottom:10px;">
+      <img src="img/redstandard.png" alt="Sandwich" style="width:100%">
+      <h3>Bicycle&reg; Red Standard</h3>
+          <p><span>Gift: free double back card for magic</span></p>
+          <h3 class="price"><strong>3.5 BD</strong></h3>
     </div>
-    <div class="w3-half w3-container">
-      <div style="height:30px;" class="w3-container w3-hide-medium w3-hide-large"></div>
-      <h2>Bicycle<sup style="font-size:20px;">&reg;</sup> <b style="color: rgba(62, 66, 255, 0.97);">Blue</b> Standard Decks</h2>
-        <img src="src/img/blueback.jpg" class="w3-round w3-image" width="300" style="border: 2px solid grey;">
-        <p style="font-size:20px;"><b>3.5 BD</b></p>
+
+    <div class="w3-mobile" style="margin-bottom:20px;">
+      <img src="img/bluestandard.png" alt="Steak" style="width:100%">
+      <h3>Bicycle&reg; Blue Standard</h3>
+      <p><span>Gift: free double back card for magic</span></p>
+  <h3 class="price"><strong>3.5 BD</strong></h3>
+    </div>
+    <div class="w3-mobile" style="margin-bottom:10px;">
+      <img src="img/special1.png" alt="Steak" style="width:100%">
+      <h3>Two Pack (Red + Blue)</h3>
+      <p><span>Gift: two free double back cards!</span></p>
+
+<h3 class="price" style="line-height:12px; margin-top:13px !important;"><p>Value Offer!</p><strong style="text-decoration:line-through;">7 BD</strong> <strong>6 BD</strong></h3>
+    </div>
+
+    <div class="w3-mobile">
+      <h5 style="color:#796f6f;">
+        - Exclusive Decks -
+      </h5>
+    </div>
+    <div class="w3-mobile" style="margin-bottom:10px;">
+
+      <div class="w3-display-container">
+      <img src="img/blackstandard.jpg" alt="Steak" style="width:96.7%" class="w3-border">
+      <div class="w3-display-middle" style="background-color:#b79c6a; color:white; font-size:30px; padding:5px;">Sold Out</div>
+      </div>
+      <h3>Bicycle&reg; Exclusive Black Back</h3>
+        <p>Rare black color</p>
+      <h3 class="price"><strong>5 BD</strong></h3>
+    </div>
+    <div class="w3-mobile" style="margin-bottom:20px;">
+      <img src="img/golddragon.jpg" alt="Steak" style="width:100%" class="w3-border">
+      <h3>Bicycle&reg; Gold Dragon Back</h3>
+
+     <p>Classic Dragon Back design</p>
+ <p>Comes with a double backer inside the box</p>
+
+
+      <h3 class="price"><strong>6 BD</strong></h3>
+    </div>
+
+    <div class="w3-mobile">
+  <h5 style="color:#796f6f;">
+    - Rare Custom Decks -
+  </h5>
+  </div>
+  <!-- Second Photo Grid-->
+
+    <div class="w3-mobile" style="margin-bottom:10px;">
+
+      <img src="img/utopia.jpg" alt="Steak" style="width:100%" class="w3-border">
+      <h3>BICYCLE&reg; UTOPIA WHITE GOLD</h3>
+      <ul style="text-align:left;">
+        <li>  <p>Printed on Premium Bee® paper stock</p></li>
+        <li>  <p><span>Magic Finish</span> provides exceptional handling</p></li>
+        <li>  <p>Comes with a double backer inside the box</p></li>
+        <li>  <p> Printed using beautiful metallic inks</p></li>
+      <li> <p>Custom designed backs, aces, jokers, court cards and pips</p></li>
+      <li>  <p>Long lasting, high quality and durability</p></li>
+      <li>  <p> Printed by US Playing Card Company. Made in USA</p></li>
+      <li>  <p>Sold out on manufacturer's website</p></li>
+      <li>  <p>Order Soon - only one available</p></li>
+      </ul>
+
+      <a style="color:#0000EE; font-size:18px;text-decoration: underline;cursor:pointer;" onclick="openModal();currentDiv(1)">view pictures</a>
+      <h3 class="price"><strong>7.5 BD</strong></h3>
+    </div>
+
+    <div class="w3-container">
+
+    <div id="myModal" class="w3-modal w3-black">
+     <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal()" style="cursor:pointer">×</span>
+     <div class="w3-modal-content">
+
+      <div class="w3-content" style="max-width:1200px">
+       <img class="mySlides" src="img/utopiafull.jpg" style="width:100%">
+       <img class="mySlides" src="img/utopia1.jpg" style="width:100%">
+       <img class="mySlides" src="img/utopia2.jpg" style="width:100%">
+       <div class="w3-row w3-black w3-center">
+        <div class="w3-display-container">
+         <p id="caption"></p>
+
+        </div>
+        <div class="w3-col s4">
+         <img class="demo w3-opacity w3-hover-opacity-off" src="img/utopiafull.jpg" style="width:100%" onclick="currentDiv(1)">
+        </div>
+        <div class="w3-col s4">
+         <img class="demo w3-opacity w3-hover-opacity-off" src="img/utopia1.jpg" style="width:100%" onclick="currentDiv(2)">
+        </div>
+        <div class="w3-col s4">
+         <img class="demo w3-opacity w3-hover-opacity-off" src="img/utopia2.jpg" style="width:100%" onclick="currentDiv(3)">
+        </div>
+       </div> <!-- End row -->
+      </div> <!-- End w3-content -->
+
+     </div> <!-- End modal content -->
+    </div> <!-- End modal -->
+
+    </div>
+
+
+    <div class="w3-mobile" style="margin-bottom:20px;">
+
+      <img src="img/asura.png" alt="Steak" style="width:100%" class="w3-border">
+      <h3>BICYCLE&reg; ASURA: BLACK EDITION</h3>
+      <ul style="text-align:left;">
+        <li>  <p>Printed on Premium Aristocrat® stock</p></li>
+        <li>  <p>Beautiful Black & Metallic silver ink on card back</p></li>
+        <li>  <p><span>Magic Finish</span> provides exceptional handling</p></li>
+        <li>  <p>Comes with a double backer inside the box</p></li>
+          <li>  <p>Custom aces, jokers & pips</p></li>
+        <li>  <p>Long lasting, high quality and durability</p></li>
+        <li>  <p> Printed by US Playing Card Company. Made in USA</p></li>
+<li>  <p>Order Soon - only one available</p></li>
+      </ul>
+
+      <a style="color:#0000EE; font-size:18px;text-decoration: underline;cursor:pointer;" onclick="openModal1();currentDiv1(1)">view pictures</a>
+      <h3 class="price"><strong>8.5 BD</strong></h3>
+
+
+      <p class="w3-mobile" style="color:black; line-height:15px; font-size:14px;">
+        <strong style="font-size:14px;">Discount</strong> Utopia White Gold Deck + Asura Black Edition <strong style="text-decoration:line-through; font-size:14px;">16 BD</strong><br><strong style="font-size:14px;">15 BD and Free Delivery</strong>
+      </p>
+    </div>
+
+        <div class="w3-container">
+
+        <div id="myModal1" class="w3-modal w3-black">
+         <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal1()" style="cursor:pointer">×</span>
+         <div class="w3-modal-content">
+
+          <div class="w3-content" style="max-width:1200px">
+           <img class="mySlides1" src="img/asurafull.png" style="width:100%">
+           <img class="mySlides1" src="img/asura1.jpg" style="width:100%">
+           <img class="mySlides1" src="img/asura2.jpg" style="width:100%">
+           <img class="mySlides1" src="img/asura3.jpg" style="width:100%">
+           <img class="mySlides1" src="img/asura4.jpg" style="width:100%">
+           <img class="mySlides1" src="img/asura5.jpg" style="width:100%">
+           <div class="w3-row w3-black w3-center">
+            <div class="w3-display-container">
+             <p id="caption1"></p>
+
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asurafull.png" style="width:100%" onclick="currentDiv1(1)">
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asura1.jpg" style="width:100%" onclick="currentDiv1(2)">
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asura2.jpg" style="width:100%" onclick="currentDiv1(3)">
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asura3.jpg" style="width:100%" onclick="currentDiv1(4)">
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asura4.jpg" style="width:100%" onclick="currentDiv1(5)">
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asura5.jpg" style="width:100%" onclick="currentDiv1(6)">
+            </div>
+           </div> <!-- End row -->
+          </div> <!-- End w3-content -->
+
+         </div> <!-- End modal content -->
+        </div> <!-- End modal -->
+
+        </div>
+
+  <hr id="order">
+
+  <!-- About Section -->
+  <div class="w3-container w3-center">
+    <h3><b>How to order?</b></h3><br>
+
+      <div class="w3-content w3-left-align w3-large" style="max-width:500px">
+
+    Simply,
+    <br> DM me on Instagram
+    <div class="w3-center">&rarr; <a href="https://www.instagram.com/bicyclebh" style="text-decoration: none; color:#0000EE;">@bicyclebh</a></div>
+    <br> or contact me via Twitter
+    <div class="w3-center">&rarr; <a href="https://twitter.com/bicyclebh" style="text-decoration: none; color:#0000EE;">@bicyclebh</a></div>
+    <br> or you can email me
+    <div class="w3-center">bicyclebahrain@gmail.com</div>
+
+      </div>
     </div>
   </div>
-  <div class="w3-container w3-center" style="margin-top:30px;">
-    <h2>Bicycle<sup style="font-size:20px;">&reg;</sup> <b style="color:black">Black</b> Exclusive Decks</h2>
+  <hr id="delivery">
+  <div class="w3-container w3-center">
+    <h3><b>Delivery</b></h3><br>
 
-  <img src="src/img/blackback.jpg" class="w3-display-container w3-round w3-image" width="300" style="border: 2px solid grey;">
-<p style="font-size:20px;"><b>5 BD</b></p>
-  </div>
+      <div class="w3-content w3-left-align w3-large" style="max-width:500px">
 
-    <p style="margin-top:60px;" class="w3-center"><a href="#prices" class="w3-button w3-black w3-round w3-padding-large w3-large">Pricing &amp; Offers</a></p>
-  </div>
-</div>
-
-<!-- Background photo -->
-<div class="w3-display-container bgimg2 w3-grayscale-min">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo w3-wide"style="border-radius:7px; background-color:white; color:black; padding:30px;">Get Yours</h1><br>
-
-  </div>
-</div>
-
-<!-- Wedding information -->
-<div class="w3-container w3-display-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="prices">
-  <div class="w3-display-bottomright" style="color:grey; padding-bottom:5px; padding-right:5px;"><a href="#delivery" style="text-decoration:none;">Delivery &darr;</a></div>
-  <h1 class="w3-center w3-text-grey" style="margin-bottom:0px;"><b>Basic Prices &amp; Special Offers</b></h1>
-  <p style="margin-top: 0 !important; margin-bottom:50px;">at discounted prices</p>
-  <div class="w3-content">
-<style>
-.w3-bordered tr, .w3-table-all tr
-{border-bottom: 1px solid #cecece;}
-
-</style>
-
-      <table class="w3-table  w3-bordered">
-        <tr>
-          <th>Product</th>
-          <th>Price</th>
-        </tr>
-        <tr>
-          <td>One Red<br>Standard Deck<br>
-
-          </td>
-            <td><b>3.5 BD</b> <br>Three Dinars &amp; 500 Fils</td>
-
-        </tr>
-
-
-        <tr>
-          <td>One Blue<br>Standard Deck</td>
-          <td><b>3.5 BD </b> <br>Three Dinars &amp; 500 Fils </td>
-        </tr>
-        <tr>
-          <td>One Black<br>Exclusive Deck <b>&#42</b></td>
-          <td><b>5 BD </b> <br>Five Dinars</b></td>
-        </tr>
-        <tr><td class="w3-center" colspan="2"><b>Special Offers</b></td></tr>
-        <tr>
-          <td><b>Two Pack</b><br>(One Red + One Blue<br>Standard Decks)</td>
-            <td><b style="text-decoration: line-through;">7 BD</b><br><b>6 BD</b> <br>Six Dinars</td>
-
-        </tr>
-
-
-        <tr>
-          <td><b>Two Pack</b> (6.5 BD)<br>+<br><b>One Black Exclusive <br class="w3-hide-medium w3-hide-large">Deck</b> (5 BD)<br>(One Red + One Blue + One Black)</td>
-        <td style="padding-top:19px;"><b style="text-decoration: line-through;"><br class="w3-hide-medium w3-hide-large">11.5 BD</b><br><b>10 BD</b><br>Ten Dinars</td>
-        </tr>
-      </table>
-<p class="w3-left-align" style="line-height:20px;"><b>&#42</b> There is only <b>one</b> black deck available. </p>
-
-  </div>
-</div>
-
-<div class="w3-display-container bgimg3 w3-grayscale-min">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo w3-wide"style="border-radius:7px; background-color:rgba(255, 175, 175, 0.84); padding:30px;">Delivery</h1><br>
-  </div>
-</div>
-
-<div class="w3-container w3-display-container w3-padding-64 w3-pale-red w3-grayscale-min" id="delivery">
-  <div class="w3-display-bottomright" style="color:grey; padding-bottom:5px; padding-right:5px;"><a href="#order" style="text-decoration:none;">Order &darr;</a></div>
-  <h1 class="w3-center w3-text-grey" style="margin-bottom:40px;"><b>Delivery Options</b></h1>
-  <div class="w3-content w3-large">
-    <p>Delivery costs <b>1 BD</b>. You can of course pick it up yourself for <b>free</b>.</p>
-    <p>Delivery is only to known landmarks in each city (i.e malls, gardens, bus stations, etc ..).</p>
-<div>
-    <p style="margin-bottom:0px;">For self pickup:
-        <ul style="margin-top:0px;">
-          <li>Located in <strong>Muharraq</strong>.</li>
-          <li><a href="https://goo.gl/maps/UhFYxfQbqR62" style="text-decoration:none; color:#0000EE;">Location on Google Maps</a> &#x2197; </li>
-          <li>Description: opposite to Ruyan Cold Store and pharmacy (Muharraq Branch) - near Al-Hidaya Secondary School - a street away from King Hamad Hospital. Also, near Osais Mall Muharraq.</li>
-        </ul>
-    </p>
+        <div class="w3-content">
+          <div style="margin-bottom:5px;">Delivery costs <b>1 BD</b>. You can of course pick it up yourself for <b>free</b>.</div>
+          <div style="margin-bottom:5px;"><b>[Discounted Delivery]</b> delivery costs <b>500 fils</b> for orders of 10 BD and more.</div>
+          <div style="margin-bottom:5px;"><b>[Free Delivery]</b> on orders of 15 BD and more.</div>
+          <div style="margin-bottom:5px;">Delivery is only to known landmarks in each city (i.e malls, gardens, bus stations, etc ..).</div>
+      <div>
+          <div style="margin-bottom:0px;">For self pickup:
+              <ul style="margin-top:0px;">
+                <li>Located in <strong>Muharraq</strong>.</li>
+                <li><a href="https://goo.gl/maps/UhFYxfQbqR62" style="text-decoration:none; color:#0000EE;">Location on Google Maps</a> &#x2197; </li>
+                <li>Description: opposite to Ruyan Cold Store and pharmacy (Muharraq Branch) - near Al-Hidaya Secondary School - a street away from King Hamad Hospital. Also, near Osais Mall Muharraq.</li>
+              </ul>
+          </div>
+          </div>
+        </div>
     </div>
-  </div>
-</div>
 
-
-<div class="w3-display-container bgimg5 w3-grayscale-min">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo w3-wide"style="border-radius:7px; background-color:rgba(125, 71, 71, 0.47); padding:30px;">Order</h1><br>
-  </div>
-</div>
-
-<div class="w3-container w3-display-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="order">
-  <div class="w3-display-bottomright" style="color:grey; padding-bottom:5px; padding-right:5px;"><a href="#faq" style="text-decoration:none;">FAQ &darr;</a></div>
-  <h1 class="w3-center w3-text-grey" style="margin-bottom:40px;"><b>How to Order?</b></h1>
-  <div class="w3-content w3-left-align w3-large" style="max-width:500px">
-
-Simply,
-<br> DM me on Instagram
-<div class="w3-center">&rarr; <a href="https://www.instagram.com/bicyclebh" style="text-decoration: none; color:#0000EE;">@bicyclebh</a></div>
-<br> or contact me via Twitter
-<div class="w3-center">&rarr; <a href="https://twitter.com/bicyclebh" style="text-decoration: none; color:#0000EE;">@bicyclebh</a></div>
-<br> or you can email me
-<div class="w3-center">bicyclebahrain@gmail.com</div>
-
-  </div>
-</div>
-
-<div class="w3-display-container bgimg4 w3-grayscale-min">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo w3-wide"style="border-radius:7px; background-color:white; color:black; padding:30px;">FAQ</h1><br>
-  </div>
-</div>
-
-<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-left-align" id="faq">
-  <h1 class="w3-center w3-text-grey" style="margin-bottom:40px;"><b>Everything You Need to Know</b></h1>
-  <div class="w3-content" style="max-width:380px">
-    <p class="w3-large" style="margin-bottom:0;"><b>Are these original Bicycle&reg; Playing Cards?</b></p>
-    <p style="margin-top:0;">Yes! Manufactured and printed by <b>USPCC</b> - The United States Playing Card Company - with the patented <b>Air-Cushion Finish</b>. Imported form the U.S.A.</p>
-
-<p class="w3-large" style="margin-bottom:0;"><b>Are these new or used?</b></p>
-<p style="margin-top:0;">New! All of the available products are brand-new, unused, unopened and sealed with the manufacturer's original seal.</p>
-
-<p class="w3-large" style="margin-bottom:0;"><b>Do i have to specify the offers when i order?</b></p>
-<p style="margin-top:0;">No. All orders will be charged according to the offer they can be grouped in whether specified or not. <b>Example:</b> ordering 3 red and 3 blue decks will be charged as 3 Two Packs not as 6 single decks.</p>
-
-<p class="w3-large" style="margin-bottom:0;"><b>Can i order a Two Pack of the same color with the offer price?</b></p>
-<p style="margin-top:0;">Unfortunately no for the time being due to the limited quantity. A Two Pack always comes in two colors (red+blue). Ordering multiples of the same color will be charged according to the price of a single deck each. This is to keep the quantities in stock between the two colors balanced. <b>However</b>, you can order as many Two Packs as you want and all orders with mixed colors will be charged with the lower offer price&semi; as many Two Packs as possible even if not specified by the buyer.</p>
 
 <br>
 
   </div>
+<hr id="faq">
+<div class="w3-container w3-center">
+  <h3><b>FAQ</b></h3><br>
+      <div class="w3-content w3-left-align w3-large" style="max-width:500px">
+
+<div><b>Are these original Bicycle&reg; Cards?</b></div>
+<div style="margin-bottom:15px;">Yes! Manufactured and printed by USPCC - The United States Playing Card Company - with the patented Air-Cushion Finish. Imported form the U.S.A.</div>
+
+<div><b>Are these new or used?</b></div>
+<div style="margin-bottom:15px;">New! All of the available products are brand-new, unused, unopened and sealed with the manufacturer's original seal.</div>
+
+<div><b>Do i have to specify the offers when i order?</b></div>
+<div style="margin-bottom:5px;">No. All orders will be charged according to the offer they can be grouped in whether specified or not. <b>Example:</b> ordering 3 red and 3 blue decks will be charged as 3 Two Packs not as 6 single decks.</div>
+ </div></div>
+<!-- End page content -->
+
+<hr>
+<div class="w3-container w3-center">
+  <div class="w3-container w3-wide">
+    <h1>HAVE FUN!</h1>
+    <div class="w3-large" style="margin-bottom:5px;">kindly contact me for any enquiries</div>
+<div>   <a style="margin-bottom:5px; text-decoration:none;" href="https://www.instagram.com/bicyclebh">@bicyclebh</a></div>
+    <a href="https://bicyclebahrain.github.io/ar/">Arabic Site</a><br><br>
+  </div>
+</div>
 </div>
 
-<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide">
-  <h1>HAVE FUN!</h1>
-  <p class="w3-large">kindly contact me for any enquiries</p>
-  <p>@bicyclebh</p>
-  <a href="https://bicyclebahrain.github.io/ar/">Arabic Site</a>
-</div>
+<script>
+function openModal1() {
+  document.getElementById('myModal1').style.display = "block";
+}
 
+function closeModal1() {
+  document.getElementById('myModal1').style.display = "none";
+}
+
+var slideIndex = 1;
+showDivs1(slideIndex);
+
+function plusDivs1(n) {
+  showDivs1(slideIndex += n);
+}
+
+function currentDiv1(n) {
+  showDivs1(slideIndex = n);
+}
+
+function showDivs1(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides1");
+  var dots = document.getElementsByClassName("demo1");
+  var captionText = document.getElementById("caption1");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000);
+}
+</script>
 
 </body>
 </html>
